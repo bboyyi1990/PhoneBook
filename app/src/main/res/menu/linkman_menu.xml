@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@mipmap/a5t"
+        android:title="别说话,吻我"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item android:title="扫一扫" />
+            <item android:title="摇一摇" />
+
+
+        </menu>
+
+
+    </item>
+
+
+    <item
+        android:icon="@mipmap/a6g"
+        android:title="!"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item android:title="1" />
+            <item android:title="2" />
+            <item android:title="3" />
+
+
+        </menu>
+
+
+    </item>
+</menu>

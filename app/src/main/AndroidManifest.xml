@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yi.dllo.phonebook">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/a0j"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.yi.dllo.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.yi.dllo.activity.OtherActivity" />
+        <activity android:name="com.yi.dllo.activity.PersonActivity" />
+
+        <receiver android:name="com.yi.dllo.BroadCastRexceiver.PersonBroadCast">
+            <intent-filter>
+                <action android:name="com.yi.dllo.phonebook.touchMessage" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.yi.dllo.service.PersonService" />
+
+    </application>
+
+</manifest>
